@@ -27,3 +27,4 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+vue-cli3.0搭建的通用vue项目
