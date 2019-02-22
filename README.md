@@ -1,30 +1,13 @@
-# vue-template
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## vue-template
 vue-cli3.0搭建的通用vue项目
+
+### 内容
+- Vuex
+- axios
+- Vue-router
+- d-js-utlis
+- typescript
+- pug模板语法
+- less全局变量配置
+- .env.development + .env.production
+- 配置rem移动端初始化字体大小
