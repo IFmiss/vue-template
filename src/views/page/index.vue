@@ -2,7 +2,7 @@
   .page
     .title 基于Vue-cli3搭建的通用js项目
     .point
-      li Vuex
+      li(@click="clickVuex")  Vuex
       li axios
       li Vue-router
       li d-js-utlis
@@ -15,11 +15,17 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
+  methods: {
+    clickVuex () {
+      this.$msg('你好')
+    }
+  },
 })
 </script>
 
 <style lang="less" scoped>
   .page {
+    width: 7.5rem;
     font-size: 0.32rem;
     .title {
       color: @primary;

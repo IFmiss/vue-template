@@ -23,14 +23,11 @@ export default {
       // 提示类型 (default: 6 1节日toast的提示信息，圆润的，胖胖的)
       typeList: ['default']
     }
-  },
-  mounted () {
   }
 }
 </script>
 
 <style lang="less">
-// @import './../../style/base.less';
 .vue-Message{
   // 6 1节日toast的提示信息，圆润的，胖胖的
   &.default{
@@ -46,11 +43,11 @@ export default {
       border-radius: 0.48rem;
       user-select: none;
       line-height: 1.5;
-      padding: 0.2rem 0.3rem;
+      padding: .20rem .30rem;
       word-wrap: break-word;
       color: #fff;
       max-width: 80%;
-      font-family: 'SourceHanSansCN-Regular';
+      font-family: SourceHanSansCN-Regular;
       font-size: 0.28rem;
     }
   }

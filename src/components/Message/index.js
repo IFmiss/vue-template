@@ -1,14 +1,16 @@
-import MyMessage from './message.vue'
+import MyMessage from './Message.vue'
 
 const Message = {
   showMessage: false,
   showMessageNew: null,
   time: null,
-  install (Vue:any, options:any) {
-
+  install (Vue, options) {
+    if (typeof window !== 'undefined' && window.Vue) {
+      Vue = window.Vue
+    }
     Vue.component('Message', MyMessage)
 
-    Vue.prototype.$msg = (obj: any, callBack: () => void ) => {
+    Vue.prototype.$msg = (obj, callBack) => {
       let opt = MyMessage.data()
 
       // 这是在main.js时 将用户use的配置写入  覆盖掉默认配置   但这不是最高的配置信息
@@ -52,9 +54,7 @@ const Message = {
 
       if (Message.showMessage || Message.showMessageNew) {
         // 如果Message还在，则先删除前一个Message 的信息以及定时器  并充值默认信息
-        if (Message.time) {
-          clearTimeout(Message.time)
-        }
+        clearTimeout(Message.time)
         Message.showMessage = false
         document.body.removeChild(Message.showMessageNew.$mount().$el)
         Message.showMessageNew = null
