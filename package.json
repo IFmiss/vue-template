@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --mode development",
+    "mock": "vue-cli-service serve --mode mock",
+    "test": "vue-cli-service serve --mode test",
+    "build:test": "vue-cli-service build --mode test",
     "build": "vue-cli-service build --mode production",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prod": "npm run init && npm run build && cp -rf ./dist ./output"
   },
   "dependencies": {
-    "@dw/d-utils": "^1.0.94",
+    "@dw/d-utils": "^1.1.15",
     "axios": "^0.18.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
