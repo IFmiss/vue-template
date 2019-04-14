@@ -6,13 +6,25 @@
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({
-  created () {
-    console.log(process.env)
+import Component from 'vue-class-component'
+import { Getter, Action } from 'vuex-class'
+import { LogUtils } from '@dw/d-utils'
+import { USER_INFO_GETTER, USER_INFO_SETTER } from '@/store/types'
+@Component
+export default class App extends Vue {
+  @Action(USER_INFO_SETTER) private setUserInfo: any
+  @Getter(USER_INFO_GETTER) private userInfo: any
+  private created() {
+    LogUtils.logSuccess(this.userInfo, 'before Action')
+    this.setUserInfo({
+      name: 'daiwei',
+      age: 24
+    })
+    LogUtils.logInfo(this.userInfo, 'after Action')
+    LogUtils.logSuccess(process.env, 'process.env')
   }
-})
+}
 </script>
-
 
 <style lang="less">
 #app {

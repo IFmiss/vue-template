@@ -12,18 +12,19 @@
     "prod": "npm run init && npm run build && cp -rf ./dist ./output"
   },
   "dependencies": {
-    "@dw/d-utils": "^1.1.15",
+    "@dw/d-utils": "^1.1.18",
     "axios": "^0.18.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "register-service-worker": "^1.5.2",
     "style-resources-loader": "^1.2.1",
     "vue": "^2.6.6",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.1",
     "vue-wechat-title": "^2.0.5",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
